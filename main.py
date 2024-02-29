@@ -24,3 +24,4 @@ def get_params(text: str):
 @app.post("/predict/")
 def predict(item: Item):
     return classifier(item.text)
+
