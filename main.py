@@ -15,6 +15,18 @@ classifier = pipeline("sentiment-analysis")
 def root():
     return {"FastApi service started!"}
 
+@app.get("/timur")
+def root():
+    return {"Polikarpov"}
+
+@app.get("/Oleg")
+def root():
+    return {"Savenko"}
+
+@app.get("/Vladislav")
+def root():
+    return {"Sanduiang"}
+
 
 @app.get("/{text}")
 def get_params(text: str):
