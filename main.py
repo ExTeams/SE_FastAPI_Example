@@ -1,26 +1,8 @@
 from fastapi import FastAPI
-from transformers import pipeline
-from pydantic import BaseModel
-
-
-class Item(BaseModel):
-    text: str
-
+from router import root, get_params, predict
 
 app = FastAPI()
-classifier = pipeline("sentiment-analysis")
 
-
-@app.get("/")
-def root():
-    return {"FastApi service started!"}
-
-
-@app.get("/{text}")
-def get_params(text: str):
-    return classifier(text)
-
-
-@app.post("/predict/")
-def predict(item: Item):
-    return classifier(item.text)
+app.include_router(root.router)
+app.include_router(get_params.router)
+app.include_router(predict.router)
