@@ -26,7 +26,6 @@ def predict(item: Item):
     return classifier(item.text)
 
 
-<<<<<<< Updated upstream
 @app.post("/analyze_texts/")
 def analyze_texts(items):
     results = []
@@ -34,6 +33,4 @@ def analyze_texts(items):
         result = {"text": item.text, "sentiment": classifier(item.text)}
         results.append(result)
     return results
-=======
 
->>>>>>> Stashed changes
