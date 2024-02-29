@@ -1,3 +1,8 @@
 .idea
 __pycache__/
+<<<<<<< Updated upstream
 venv/
+=======
+venv/
+.pytest_cache/
+>>>>>>> Stashed changes
