@@ -4,7 +4,7 @@ certifi==2023.11.17
 charset-normalizer==3.3.2
 colorama==0.4.6
 exceptiongroup==1.2.0
-fastapi==0.104.1
+fastapi==0.68.0
 filelock==3.13.1
 fsspec==2023.10.0
 huggingface-hub==0.19.4
