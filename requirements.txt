@@ -31,3 +31,4 @@ transformers==4.27.4
 typing_extensions==4.8.0
 urllib3==2.1.0
 streamlit
+httpx==0.21.0
