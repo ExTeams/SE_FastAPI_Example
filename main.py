@@ -24,3 +24,12 @@ def get_params(text: str):
 @app.post("/predict/")
 def predict(item: Item):
     return classifier(item.text)
+
+
+@app.post("/analyze_texts/")
+def analyze_texts(items):
+    results = []
+    for item in items:
+        result = {"text": item.text, "sentiment": classifier(item.text)}
+        results.append(result)
+    return results
