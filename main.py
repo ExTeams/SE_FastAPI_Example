@@ -25,7 +25,7 @@ def root():
 
 @app.get("/Vladislav")
 def root():
-    return {"Sanduiang"}
+    return {"Sanduian"}
 
 @app.get("/savenko")
 def root():
