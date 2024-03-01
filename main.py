@@ -31,6 +31,7 @@ def root():
 def root():
     return {"Это сделал Олег Савенко!(EZ)"}
 
+
 @app.get("/{text}")
 def get_params(text: str):
     return classifier(text)
