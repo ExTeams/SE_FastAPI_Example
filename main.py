@@ -25,7 +25,11 @@ def root():
 
 @app.get("/Vladislav")
 def root():
-    return {"Sanduiang"}
+    return {"Sanduian"}
+
+@app.get("/savenko")
+def root():
+    return {"Это сделал Олег Савенко!(EZ)"}
 
 
 @app.get("/{text}")
@@ -36,3 +40,4 @@ def get_params(text: str):
 @app.post("/predict/")
 def predict(item: Item):
     return classifier(item.text)
+
